@@ -1,0 +1,49 @@
+C# 8.0 Features
+================
+Null-coalescing assignment: ??=
+-------------------------------
+
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Static local functions
+----------------------
+int M()
+{
+    int y = 5;
+    int x = 7;
+    return Add(x, y);
+
+    static int Add(int left, int right) => left + right;
+}
+
+
+C#9.0 Features
+===================
+Pattern matching enhancements:
+------------------------------
+if(numbers is not null)
+{
+
+}
+OR 
+if(numbers!=null)
+{
+
+}
+c is >= 'a' and <= 'z' or >= 'A' and <= 'Z'
+
+
+Record types:
+-------------
+public record Person
+    {
+        public string LastName { get; }
+        public string FirstName { get; }
+
+        public Person(string first, string last) => (FirstName, LastName) = (first, last);
+    }
