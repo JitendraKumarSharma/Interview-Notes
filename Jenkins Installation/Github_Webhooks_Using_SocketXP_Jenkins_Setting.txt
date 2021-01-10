@@ -1,0 +1,59 @@
+Steps to Install Jenkins
+===========================
+Installation tutorial Link "https://www.youtube.com/watch?v=MlvNXFdPhB8"
+First download the "jdk-11.0.9_windows-x64_bin.exe"
+Then set the environment variable for JDK and add the path of Java bin folder in "Path" variable
+Then download and install the Jenkins
+To verify whether the Jenkins is install or not paste this URL "http://localhost:8080/" in your browser.
+
+- Download the "socketxp.exe" from socketxp download site "https://www.socketxp.com/download".
+- Open the folder where "socketxp.exe" file is store.
+- Then open command prompt at the same root.
+- In my system "socketxp.exe" file is in "E:\Software" folder so the path is same as below
+	E:\Software>
+- Run the folloing command
+	E:\Software>socketxp relay http://localhost:8080/github-webhook/
+	
+	This will give you a Public URL something like as given below.
+
+Connected.
+Public URL -> https://webhook.socketxp.com/jeetsharma8390-1z14oy8h 
+
+Webhooks Setting in Github for specific Repository
+==================================================
+
+Payload URL : https://webhook.socketxp.com/jeetsharma8390-1z14oy8h
+
+Content type = "application/json"
+
+Select the "Send me everything" under "Which events would you like to trigger this webhook?"
+
+Check the "Active"
+
+Jenkins
+=======
+Login URL: http://localhost:8080/login?from=%2F
+Username: JeetJenkins
+Password: Jeet123Jenkins@$
+
+After login to jenkins
+
+1- Create new Item and set the configuration as below
+
+Under GitHub project Checkbox
+==============================
+Project URL : from the Browser Addressbar 
+for e.g. : https://github.com/JitendraKumarSharma/Interview-Notes/
+
+Under Git Radio buttion
+=========================
+Repository URL	: https://github.com/JitendraKumarSharma/Interview-Notes.git (Link of the code)
+Add Credential if required.
+
+Name : Put the RepositoryName (origin)
+
+Refspec : +refs/heads/origin:refs/remotes/origin/Interview-Notes
+
+
+Under Build Triggers select GitHub hook trigger for GITScm polling
+Apply and Save
