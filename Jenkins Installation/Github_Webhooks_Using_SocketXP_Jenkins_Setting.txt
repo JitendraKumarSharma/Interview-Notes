@@ -19,6 +19,12 @@ To verify whether the Jenkins is install or not paste this URL "http://localhost
 Connected.
 Public URL -> https://webhook.socketxp.com/jeetsharma8390-1z14oy8h 
 
+
+GitHub Webhook Integration with Localhost Jenkins:
+https://www.socketxp.com/webhookrelay/github-webhook-localhost-jenkins
+
+
+
 Webhooks Setting in Github for specific Repository
 ==================================================
 
